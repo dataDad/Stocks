@@ -1,0 +1,31 @@
+Sparkline = 
+// Static line color
+VAR LineColor = IF([Percent Change Last Year] >=0,"#01B8AA","#FD625E")
+// "Date" field used in this example along the X axis
+
+VAR XMaxDate = MAX('stock prices'[ref.date])
+-- XminDate = MIN('stock prices'[ref.date])
+VAR XMinDate = XMaxDate-360
+--var XDates = DATESBETWEEN('stock prices'[ref.date],XMinDate,XMaxDate)
+// Obtain overall min and overall max measure values when evaluated for each date
+--VAR YMinValue = MINX(ALLSELECTED('stock prices'[ref.date]),CALCULATE([Measure Value]))
+--VAR YMaxValue = MAXX(ALLSELECTED('stock prices'[ref.date]),CALCULATE([Measure Value]))
+VAR YMinValue = MINX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
+VAR YMaxValue = MAXX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
+
+// Build table of X & Y coordinates and fit to 100 x 100 viewbox
+VAR SparklineTable = ADDCOLUMNS(
+    SUMMARIZE('stock prices','stock prices'[ref.date]),
+        "X",INT(100 * DIVIDE('stock prices'[ref.date] - XMinDate, XMaxDate - XMinDate)),
+        "Y",INT(100 * DIVIDE([Measure Value] - YMinValue,YMaxValue - YMinValue)))
+// Concatenate X & Y coordinates to build the sparkline
+VAR Lines = CONCATENATEX(SparklineTable,[X] & "," & 100-[Y]," ", [ref.date])
+// Add to SVG, and verify Data Category is set to Image URL for this measure
+VAR SVGImageURL = IF(HASONEVALUE('stock prices'[ticker]),
+    "data:image/svg+xml;utf8," & 
+    "<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 100 100'>" &
+     "<polyline fill='none' stroke='" & LineColor & 
+     "' stroke-width='2' points='" & Lines & 
+     "'/></svg>",
+     BLANK())
+RETURN SVGImageURL
