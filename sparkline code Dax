@@ -1,18 +1,15 @@
 Sparkline = 
 // Static line color
 VAR LineColor = IF([Percent Change Last Year] >=0,"#01B8AA","#FD625E")
-// "Date" field used in this example along the X axis
-
+// "Date" field used in this example along the X axis 
 VAR XMaxDate = MAX('stock prices'[ref.date])
--- XminDate = MIN('stock prices'[ref.date])
-VAR XMinDate = XMaxDate-360
---var XDates = DATESBETWEEN('stock prices'[ref.date],XMinDate,XMaxDate)
+VAR XMinDate = XMaxDate-365
+-- I used 365 to have a sparkline for the past year
 // Obtain overall min and overall max measure values when evaluated for each date
---VAR YMinValue = MINX(ALLSELECTED('stock prices'[ref.date]),CALCULATE([Measure Value]))
---VAR YMaxValue = MAXX(ALLSELECTED('stock prices'[ref.date]),CALCULATE([Measure Value]))
 VAR YMinValue = MINX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
 VAR YMaxValue = MAXX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
-
+--[Measure Value] Is a simple measure used to calculate the Sum of the price.Cose below
+----Measure Value = SUM('stock prices'[price.close])
 // Build table of X & Y coordinates and fit to 100 x 100 viewbox
 VAR SparklineTable = ADDCOLUMNS(
     SUMMARIZE('stock prices','stock prices'[ref.date]),
