@@ -1,5 +1,5 @@
 Sparkline = 
-// Static line color
+// Line color changes based on measure. If you wanted static color, could just set LineColor = "#01B8AA"
 VAR LineColor = IF([Percent Change Last Year] >=0,"#01B8AA","#FD625E")
 // "Date" field used in this example along the X axis 
 VAR XMaxDate = MAX('stock prices'[ref.date])
