@@ -8,7 +8,7 @@ VAR XMinDate = XMaxDate-365
 // Obtain overall min and overall max measure values when evaluated for each date
 VAR YMinValue = MINX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
 VAR YMaxValue = MAXX(VALUES('stock prices'[ref.date]),CALCULATE([Measure Value]))
---[Measure Value] Is a simple measure used to calculate the Sum of the price.Cose below
+--[Measure Value] Is a simple measure used to calculate the Sum of the price.close below
 ----Measure Value = SUM('stock prices'[price.close])
 // Build table of X & Y coordinates and fit to 100 x 100 viewbox
 VAR SparklineTable = ADDCOLUMNS(
