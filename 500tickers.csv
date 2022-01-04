@@ -79,7 +79,7 @@ BMY,Bristol Myers Squibb,reports,Health Care,Health Care Distributors,"New York 
 AVGO,Broadcom,reports,Information Technology,Semiconductors,"San Jose, California",5/8/2014,1730168,1961
 BR,Broadridge Financial Solutions,reports,Information Technology,Data Processing & Outsourced Services,"Lake Success, New York",6/18/2018,1383312,1962
 BRO,Brown & Brown,reports,Financials,Insurance Brokers,"Daytona Beach, Florida",9/20/2021,79282,1939
-BF.B,Brown–Forman,reports,Consumer Staples,Distillers & Vintners,"Louisville, Kentucky",10/31/1982,14693,1870
+BF.B,BrownÂ–Forman,reports,Consumer Staples,Distillers & Vintners,"Louisville, Kentucky",10/31/1982,14693,1870
 CHRW,C. H. Robinson,reports,Industrials,Air Freight & Logistics,"Eden Prairie, Minnesota",3/2/2007,1043277,1905
 CDNS,Cadence Design Systems,reports,Information Technology,Application Software,"San Jose, California",9/18/2017,813672,1988
 CZR,Caesars Entertainment,reports,Consumer Discretionary,Casinos & Gaming,"Reno, Nevada",3/22/2021,1590895,1973
@@ -178,7 +178,7 @@ EFX,Equifax,reports,Industrials,Research & Consulting Services,"Atlanta, Georgia
 EQIX,Equinix,reports,Real Estate,Specialized REITs,"Redwood City, California",3/20/2015,1101239,1998
 EQR,Equity Residential,reports,Real Estate,Residential REITs,"Chicago, Illinois",12/3/2001,906107,1969
 ESS,Essex Property Trust,reports,Real Estate,Residential REITs,"San Mateo, California",4/2/2014,920522,1971
-EL,Estée Lauder Companies,reports,Consumer Staples,Personal Products,"New York City, New York",1/5/2006,1001250,1946
+EL,EstÃ©e Lauder Companies,reports,Consumer Staples,Personal Products,"New York City, New York",1/5/2006,1001250,1946
 ETSY,Etsy,reports,Consumer Discretionary,Internet & Direct Marketing Retail,"New York City, New York",9/21/2020,1370637,2005
 EVRG,Evergy,reports,Utilities,Electric Utilities,"Kansas City, Missouri",6/5/2018,1711269,1909
 ES,Eversource Energy,reports,Utilities,Multi-Utilities,"Hartford, Connecticut",,72741,1966
@@ -410,7 +410,7 @@ RCL,Royal Caribbean Group,reports,Consumer Discretionary,"Hotels, Resorts & Crui
 SPGI,S&P Global,reports,Financials,Financial Exchanges & Data,"New York City, New York",,64040,1917
 CRM,Salesforce,reports,Information Technology,Application Software,"San Francisco, California",9/15/2008,1108524,1999
 SBAC,SBA Communications,reports,Real Estate,Specialized REITs,"Boca Raton, Florida",9/1/2017,1034054,1989
-SLB,Schlumberger,reports,Energy,Oil & Gas Equipment & Services,"Curaçao, Kingdom of the Netherlands",3/31/1965,87347,1926
+SLB,Schlumberger,reports,Energy,Oil & Gas Equipment & Services,"CuraÃ§ao, Kingdom of the Netherlands",3/31/1965,87347,1926
 STX,Seagate Technology,reports,Information Technology,"Technology Hardware, Storage & Peripherals","Dublin, Ireland",7/2/2012,1137789,1979
 SEE,Sealed Air,reports,Materials,Paper Packaging,"Charlotte, North Carolina",3/4/1957,1012100,1960
 SRE,Sempra Energy,reports,Utilities,Multi-Utilities,"San Diego, California",,1032208,1998
@@ -504,3 +504,5 @@ ZBRA,Zebra Technologies,reports,Information Technology,Electronic Equipment & In
 ZBH,Zimmer Biomet,reports,Health Care,Health Care Equipment,"Warsaw, Indiana",8/7/2001,1136869,1927
 ZION,Zions Bancorp,reports,Financials,Regional Banks,"Salt Lake City, Utah",6/22/2001,109380,1873
 ZTS,Zoetis,reports,Health Care,Pharmaceuticals,"Parsippany, New Jersey",6/21/2013,1555280,1952
+BTC, Bitcoin, Cryptocurrency, Cryptocurrency, Cryptocurrency, , , , 
+ETH, Ethereum, Cryptocurrency, Cryptocurrency, Cryptocurrency, , , , 
